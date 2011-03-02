@@ -1,0 +1,19 @@
+Beginning with 0.15.7, Tomboy bundles its own HttpUtility class, leading 
+to the following error:
+
+src/AuthenticationTypes.cs(44,41): error CS0433: The imported type 
+`System.Web.HttpUtility' is defined multiple times
+/usr/lib/mono/gac/System.Web/2.0.0.0__b03f5f7f11d50a3a/System.Web.dll 
+(Location of the symbol related to previous error)
+/usr/lib/tomboy/Tomboy.exe (Location of the symbol related to previous error)
+
+--- origsrc/tomboy-blogposter-0.4.4/src/Makefile.am	2009-04-20 00:55:42.000000000 -0500
++++ src/tomboy-blogposter-0.4.4/src/Makefile.am	2011-03-02 00:16:35.192635800 -0600
+@@ -14,7 +14,6 @@ FLAGS = \
+ 	-debug \
+ 	-target:library \
+ 	-pkg:tomboy-addins \
+-	-r:System.Web \
+ 	-r:Mono.Posix
+ 
+ $(TARGET).mdb: $(TARGET)

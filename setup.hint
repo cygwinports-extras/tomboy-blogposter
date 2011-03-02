@@ -1,0 +1,6 @@
+category: Gnome
+requires: mono mono-gtk-sharp2.0 tomboy
+sdesc: "Tomboy blogging plugin"
+ldesc: "Tomboy Blogposter is a Tomboy plugin to post notes to a blog 
+from for instance Wordpress, Blogger or LiveJournal, or (hopefully) any 
+other AtomPub enabled website."
